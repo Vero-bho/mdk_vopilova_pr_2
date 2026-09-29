@@ -102,6 +102,7 @@ namespace m1.Pages
                     output += " → ";
             }
 
+
             txtResult.Text = output;
         }
 
