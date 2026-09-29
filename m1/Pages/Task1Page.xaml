@@ -1,0 +1,54 @@
+﻿<Page x:Class="m1.Pages.Task1Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:m1.Pages"
+      mc:Ignorable="d"
+      Title="Task1Page"  Height="800" Width="1000"
+        MinHeight="700" MinWidth="900">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Purple">
+            <Image Width="45" Height="45" HorizontalAlignment="Left" Margin="5"/>
+            <TextBlock Text="Задание 1" Foreground="White"
+                       FontSize="22" FontWeight="Bold"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"
+                       Margin="60,0,0,0"/>
+            <Button x:Name="btnBack" Content="Назад"
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Width="90" Height="34" Margin="0,0,10,0"
+                    FontSize="15" Background="#FFCFCACA"
+                    BorderBrush="Black" BorderThickness="1"
+                    Click="btnBack_Click"/>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20">
+
+                <TextBlock Text="Вывести на экран число 2n!, n ≤ 100, n — натуральное."
+                           TextWrapping="Wrap" FontSize="16" Margin="0,0,0,20"/>
+
+                <TextBlock Text="Введите n:" FontSize="16" Margin="0,0,0,5"/>
+                <TextBox x:Name="txtN" Width="200" Height="36"
+                         HorizontalAlignment="Left" FontSize="16" Margin="0,0,0,15"/>
+
+                <Button x:Name="btnCalc" Content="Вычислить"
+                        Width="160" Height="38" HorizontalAlignment="Left"
+                        FontSize="15" Background="#FFBDA8C9"
+                        BorderBrush="Black" BorderThickness="1"
+                        Margin="0,0,0,20" Click="btnCalc_Click"/>
+
+                <TextBlock Text="Результат:" FontSize="16" Margin="0,0,0,5"/>
+                <TextBox x:Name="txtResult" Height="150" IsReadOnly="True"
+                         TextWrapping="Wrap" AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto" FontSize="15"
+                         FontFamily="Consolas"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
